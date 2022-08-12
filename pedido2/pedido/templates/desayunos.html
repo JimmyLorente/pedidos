@@ -1,29 +1,29 @@
 {% extends 'base.html' %}
 
-{% block title %} Cremas {% endblock %}
+{% block title %} Desayunos {% endblock %}
 
 {% block content %} 
 
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 text-center">
-                <h2 class="pt-3"> Mas cremas </h2>
+                <h2 class="pt-3"> Mas Desayunos </h2>
                 <div class="row">
-                    {% for cremas in cremas %}
+                    {% for desayunos in desayunos %}
                     <div class="col-md-4 p-4">
-                        <img class="pictures" src="{{ cremas.cImage }}" >
-                        <h2 class="item-title" id="crm{{cremas.id}}"> {{cremas.name}} </h2>
+                        <img class="pictures" src="{{ desayunos.dImage }}" >
+                        <h2 class="item-title" id="dsy{{desayunos.id}}"> {{desayunos.name}} </h2>
                         <div class="form-check-inline">
                             <label  class="form-check-label">
-                                <input class="form-check-input" type="radio" name="crm{{cremas.id}}" value="{{ cremas.priceM }}">
-                                {{ cremas.priceM }} $
+                                <input class="form-check-input" type="radio" name="dsy{{desayunos.id}}" value="{{ desayunos.priceM }}">
+                                {{ desayunos.priceM }} $
 
                             </label>
                         </div>
                         <div class="form-check-inline">
                             <label  class="form-check-label">
-                                <input class="form-check-input" type="radio" name="crm{{cremas.id}}" value="{{ cremas.priceM }}">
-                                {{ cremas.priceL }} $
+                                <input class="form-check-input" type="radio" name="dsy{{desayunos.id}}" value="{{ desayunos.priceM }}">
+                                {{ desayunos.priceL }} $
                             </label>     
                         </div>
                         <div>
@@ -41,8 +41,9 @@
                 <h4> Total a Pagar: 0$</h4>
              
             </div>
+             
+            </div>
         </div>
-        
     </div>
 
 

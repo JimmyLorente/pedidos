@@ -13,20 +13,33 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-light"  >
         <div class="container-fluid">
+          <!-- Aqui va el logo -->
             <a class="navbar-brand" href="{% url 'index' %}">
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAFA0lEQVRYhbWXfUyVZRjGf/d73sM5CIoKLhVw4OYM5lrzC8hYlE5niE0NV7MtoE1XucrcagOt4xauWlubztYfBfaxPkZO42y5rPyCBFpkq1Azi6kEKpCKAufjPe/dH+fAkG+24/3X897PdV/Xdd7neZ/nPsIE40HypwUxtgisA+ZF0ueBagey90eqb02ETyYCzuaxLNCvQFNGIGsDyQ/g+sdFbyZAiFBTA4e7JmQghzXJirwtcLsO75YBudPADOCEIuUQbAhXOLMELQMeAnoAE4iJ0AWBLw3M7ac4eG2wljk4sYRHZypyCpijcLEvr8jqsLhW17N4HXjsAWXfgeeHbBoPAQWAX6FOIAQsAZ6ysZblsjqrhsPtA/WMwQYcmK9HxE+GCGX35W/h/hhkwzRCGweJR8JjO5BNipYEcaY34H2gHm+uA5kL/AKkB3AeGFw1ZAmyKfgXmC2QUYf33FChicdi1i4z0VqQQD3VroFz/W9gEZudWawpBmYCBKAjGuIAbkJnwiM1s1hTvIjNzjsM5JHnNrniFaQikms3sQLRMtDLJBtoBwxBKkyuePPIc/cb8DNlm6CrgA7QJ4KQNtqnM9FopOpmENIUeRLoEHRVL5NfgsgeyKbgDJAhsK4O76FoCQ8X2axdD3oAOFuPN7NvD6QAOLBP3E1xAMF/fKBmn4ELABbGhrttwMb1eGT4F4AjbGV+CFgLrEzmXiOVjEstnLsRTeGlFKTPYf4LQDlgCuxs4fzpvnNAsinYBzwbefbZmCk/cbAzOuLrEg2sFsAdSb1Xj3croH1LoPV4n1PIJXx2u310+6IhDuAkFIiIWwq59XifBxQGHcUNeGuBNoB43IuiZcDGXhoZtkY0+mPIZQT6BcgrNvpJDvmbAyQfnct1+zK+lWaM692pSfd0hiYZjxy+sNc/sKowZVtsT8j//fWOK9PsYHB7Ku4jFBbSUvXRCsX4IPKDPx+sNuQuuI+VcZNwHSN8i2E4HGrbaqF2//Hpio1rFqfjNX/QcQxg6pS4/N7bXTt83V2p/cRiBB1Op9MK9Pus78G/4jeOdI9qACCHwljFV2aaMVstK5AQSV+dlTbvTFfntYe7b90croy4yQnEJ0z/5mpL80Iid4rT6eoMBn173dx+6zjHh+yrUTuifZ6mePW5WkUlPi4+fp4/FGpTK3ipqeFoYnNTIzeutVq2qp04MyUmLXMhmUvzzl51pi1IM/7L6PV1/aFwPTaG2cWe9BE39JgtWWV55/ugW0B3FZfN8FSUd7whUBae1V0K1YI0hh9lY/GOxKqK8s53BN2uwp6S0qQXR+Mf0pAMReiHEa9FHo8aZtDaA/gAVPnzUjDpV+AU8O1Fa/oBj0dNUd0EIGpXjkU/rqZ0f3nH7woL1GZ5yc6ko/vLO3YrPG2buuSZV2e03oHd3b5WVb4GGovLkhaPxT3MZzg0FD4F3hShCDhaVJZUCpQOh7VViiRcVDEe7rGXAFCVzwAbYX2lp9k9Eu5TT+cUgXwBS41gVdQMlOxIvCzhxjLOcMbnjISznHYuEGNDTUnprPaRcBM2AKCitQAhJW8U2HIAQU+Ol3fcBkBqwgWycCSEjdwPoMLPUTdgG6G/ARRNHQljQCqAIBeib0DMcG8gMuz/wrA5kgEChtE2Xt5xfYYACc6ezm4rFiCxsrxDR8O2+aZ1jzY/MMb9Bja+nNoraO3YSKnxeMQaL+//QEHPyKYJ6sUAAAAASUVORK5CYII=" class="logo">
                 Fresh Life
             </a>
+          <!--Aqui va el boton -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" _msthidden="A" _msthiddenattr="1863095" _mstaria-label="320099">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <!-- aqui van los link -->
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link {% if activate_link == 'index' %}activate{% endif %}" aria-current="page" href="{% url 'index' %}" _msthash="731484" _msttexthash="59059">Inicio </a>
               <a class="nav-link {% if activate_link == 'pizza' %}activate{% endif %}" href="{% url 'pedido:pizza' %}" _msthash="731601" _msttexthash="136006">Ensaladas </a>
               <a class="nav-link {% if activate_link == 'crema' %}activate{% endif %}" href="{% url 'pedido:crema' %}" _msthash="731718" _msttexthash="95589">Cremas </a>
-              <a class="nav-link " href="#" _msthash="731601" _msttexthash="136006">Desayunos </a>
-              <a class="nav-link" href="#" _msthash="731718" _msttexthash="95589">Almuerzos </a>
+              <a class="nav-link {% if activate_link == 'desayuno' %}activate{% endif %}" href="{% url 'pedido:desayuno' %}" _msthash="731601" _msttexthash="136006">Desayunos </a>
+              <a class="nav-link {% if activate_link == 'almuerzo' %}activate{% endif %}" href="{% url 'pedido:almuerzo' %}" _msthash="731718" _msttexthash="95589">Almuerzos </a>
+              
+              <div class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a href="" class="nav_link "><img src="https://img.icons8.com/cute-clipart/40/000000/shopping-cart.png"/><span id="cart">0</span></a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav_link ml-2"><img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png"/><br>Login </a>
+                </li>
+              </div>
+              
             </div>
           </div>
         </div>

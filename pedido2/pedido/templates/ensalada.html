@@ -1,33 +1,35 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %} Ensalada {% endblock %}
 
 {% block content %} 
 
     <div class="container-fluid">
-        <div class="row text-center">
-            <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-8 text-center">
                 <h2 class="pt-3"> Mas ensaladas</h2>
                 <div class="row">
                     {% for ensaladas in ensaladas %}
                     <div class="col-md-4 p-4">
                         <img class="pictures" src="{{ ensaladas.pImage }}" >
-                        <h2 class="item-title"> {{ensaladas.name}} </h2>
+                        <h2 class="item-title" id="piz{{ensaladas.id}}"> {{ensaladas.name}} </h2>
                         <div class="form-check-inline">
                             <label  class="form-check-label">
-                                <input class="form-check-input" type="radio" checked>
-                                {{ ensaladas.priceM }} $
+                                <input class="form-check-input" type="radio" name="ens{{ensaladas.id}}" value="{{ ensaladas.priceM }}">
+                                M: {{ ensaladas.priceM }} $
 
                             </label>
                         </div>
                         <div class="form-check-inline">
                             <label  class="form-check-label">
-                                <input class="form-check-input" type="radio" checked>
-                                {{ ensaladas.priceL }} $
+                                <input class="form-check-input" type="radio" name="ens{{ensaladas.id}}" value="{{ ensaladas.priceL }}">
+                                L: {{ ensaladas.priceL }} $
                             </label>     
                         </div>
                         <div>
-                            <button class="btn-info mt-3"> Añade al carrito </button>
+                            <button class="btn-info mt-3" onclick="addEnsalada('{{ ensaladas.id }}')"> Añade al carrito </button>
                         </div>
                         
                     </div>
@@ -35,13 +37,15 @@
                 </div>
              
             </div>
-            <div class="col-md-8">
-             
+            <div class="col-md-4 order">
+                <div class="bg-dark p-4 rounded text-light">
+                    <h2 class="text-center"> Lista de Ordenes </h2>
+                    <ul id="pcart"></ul>
+                    <h4 id="ptotal"> Total a Pagar: 0$</h4>
+                </div> 
             </div>
         </div>
     </div>
-
-
-
+    <script src="{% static 'food/js/order.js' %}"></script>
 
 {% endblock %}

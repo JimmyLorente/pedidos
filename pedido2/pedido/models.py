@@ -14,3 +14,15 @@ class Crema(models.Model):
     priceM  = models.DecimalField(max_digits=4, decimal_places=2)
     priceL  = models.DecimalField(max_digits=4, decimal_places=2)
     cImage  = models.URLField() 
+
+class Desayuno(models.Model):
+    name    = models.CharField(max_length=100)
+    priceM  = models.DecimalField(max_digits=4, decimal_places=2)
+    priceL  = models.DecimalField(max_digits=4, decimal_places=2)
+    dImage  = models.URLField() 
+
+class Almuerzo(models.Model):
+    name    = models.CharField(max_length=100)
+    priceM  = models.DecimalField(max_digits=4, decimal_places=2)
+    priceL  = models.DecimalField(max_digits=4, decimal_places=2)
+    aImage  = models.URLField() 
