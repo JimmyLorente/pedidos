@@ -22,10 +22,10 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="{% url 'index' %}" _msthash="731484" _msttexthash="59059">Inicio </a>
-              <a class="nav-link" href="{% url 'pedido:pizza' %}" _msthash="731601" _msttexthash="136006">Ensaldas </a>
-              <a class="nav-link" href="#" _msthash="731718" _msttexthash="95589">Cremas </a>
-              <a class="nav-link" href="#" _msthash="731601" _msttexthash="136006">Desayunos </a>
+              <a class="nav-link {% if activate_link == 'index' %}activate{% endif %}" aria-current="page" href="{% url 'index' %}" _msthash="731484" _msttexthash="59059">Inicio </a>
+              <a class="nav-link {% if activate_link == 'pizza' %}activate{% endif %}" href="{% url 'pedido:pizza' %}" _msthash="731601" _msttexthash="136006">Ensaladas </a>
+              <a class="nav-link {% if activate_link == 'crema' %}activate{% endif %}" href="{% url 'pedido:crema' %}" _msthash="731718" _msttexthash="95589">Cremas </a>
+              <a class="nav-link " href="#" _msthash="731601" _msttexthash="136006">Desayunos </a>
               <a class="nav-link" href="#" _msthash="731718" _msttexthash="95589">Almuerzos </a>
             </div>
           </div>

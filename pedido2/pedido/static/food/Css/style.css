@@ -14,3 +14,14 @@
     background-repeat: no-repeat;
     z-index: -1;
 }
+
+.title{
+    margin: 50px;
+    text-align: center;
+}
+
+.pictures{
+    width: 200px;
+    border-radius: 10px;
+    height: 150px;
+}
