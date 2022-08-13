@@ -17,14 +17,14 @@
                         <h2 class="item-title" id="piz{{ensaladas.id}}"> {{ensaladas.name}} </h2>
                         <div class="form-check-inline">
                             <label  class="form-check-label">
-                                <input class="form-check-input" type="radio" name="ens{{ensaladas.id}}" value="{{ ensaladas.priceM }}">
+                                <input class="form-check-input" name="ensalada{{ensaladas.id}}" type="radio" value="{{ ensaladas.priceM }}">
                                 M: {{ ensaladas.priceM }} $
 
                             </label>
                         </div>
                         <div class="form-check-inline">
                             <label  class="form-check-label">
-                                <input class="form-check-input" type="radio" name="ens{{ensaladas.id}}" value="{{ ensaladas.priceL }}">
+                                <input class="form-check-input" name="ensalada{{ensaladas.id}}" type="radio" value="{{ ensaladas.priceL }}">
                                 L: {{ ensaladas.priceL }} $
                             </label>     
                         </div>

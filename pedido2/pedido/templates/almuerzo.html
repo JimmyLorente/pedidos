@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %} Almuerzo {% endblock %}
 
 {% block content %} 
@@ -12,22 +14,22 @@
                     {% for almuerzos in almuerzos %}
                     <div class="col-md-4 p-4">
                         <img class="pictures" src="{{ almuerzos.aImage }}" >
-                        <h2 class="item-title" id="alm{{almuerzos.id}}"> {{ almuerzos.name}} </h2>
+                        <h2 class="item-title" id="almu{{almuerzos.id}}"> {{ almuerzos.name}} </h2>
                         <div class="form-check-inline">
                             <label  class="form-check-label">
                                 <input class="form-check-input" type="radio" name="alm{{almuerzos.id}}" value="{{ almuerzos.priceM }}">
-                                {{ almuerzos.priceM }} $
+                                M: {{ almuerzos.priceM }} $
 
                             </label>
                         </div>
                         <div class="form-check-inline">
                             <label  class="form-check-label">
                                 <input class="form-check-input" type="radio" name="alm{{almuerzos.id}}" value="{{ almuerzos.priceM }}">
-                                {{ almuerzos.priceL }} $
+                                L: {{ almuerzos.priceL }} $
                             </label>     
                         </div>
                         <div>
-                            <button class="btn-info mt-3"> Añade al carrito </button>
+                            <button class="btn-info mt-3" onclick="addAlmuerzos('{{ almuerzos.id }}')"> Añade al carrito </button>
                         </div>
                         
                     </div>
@@ -36,16 +38,15 @@
              
             </div>
             <div class="col-md-4 order">
-                <h2 class="text-center"> Lista de Ordenes </h2>
-                <ul></ul>
-                <h4> Total a Pagar: 0$</h4>
-             
-            </div>
-            
-        </div>
-       
+                <div class="bg-dark p-4 rounded text-light">
+                    <h2 class="text-center"> Lista de Ordenes </h2>
+                    <ul id="acart"></ul>
+                    <h4 id="atotal"> Total a Pagar: 0$</h4>
+                </div>
+            </div>            
+        </div>       
     </div>
-
+    <script src="{% static 'food/js/almuerzo.js' %}"></script>
 
 
 
