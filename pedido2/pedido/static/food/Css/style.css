@@ -34,3 +34,8 @@
 nav-item{
     margin-left: 70%;
 }
+
+
+li {
+    display: flex;
+}
