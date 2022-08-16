@@ -1,0 +1,263 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Ensalada {% endblock %}
+
+{% block content %} 
+
+<!-- Aqui los estilos de la hoja  -->
+<style>
+    .receta{
+        display: grid;
+        grid-template-columns: 35% auto;
+        grid-template-rows: auto auto auto;
+        align-items: stretch;
+        background: rgba(196, 196, 196, 0.5);
+    }
+    
+    
+    .titulo{
+        grid-column: 1/3;
+        text-align: center;
+        font-family: 'Indie Flower', cursive;
+        margin-top: 20px;
+        border-radius: 10px ;
+        width: 80%;
+        box-shadow: 0px 15px 25px rgba(177, 255, 105, 0.534);
+    }
+    
+    .titulo h2{
+        color: black;
+        transition: all 500ms ease-out;
+        font-size: 30px;
+    }
+    
+    .titulo:hover >h2{
+        color: red;
+    }
+    
+    
+    
+    .titulo img{
+        width: 500px;
+        height: 400px;
+        max-width: 100%;
+    }
+    
+    /* Aqui va el css de los ingredientes */
+    
+    .ingredientes{
+        width: 400px;
+        font-family: 'Indie Flower', cursive;
+        font-size: 20px;
+        margin-left: 30%;
+    }
+    
+    
+    
+    .preparación{
+        width: 650px;
+        margin-left: 80px;
+        box-shadow: 0px 15px 25px rgba(177, 255, 105, 0.534);
+    }
+    
+    .preparación p{
+        padding: 10px;
+        font-size: 20px;
+    }
+    
+    .preparación h3, h1{
+        padding: 10px;
+        font-size: 30px;
+        font-family: 'Indie Flower', cursive;
+        color: lightsalmon;
+    }
+    
+    .preparación img{
+        width: 200px;
+        height: 180px;
+        margin-left: 30%;
+        border-radius: 6px;
+    }
+    
+    /* Aqui va el css de los preparacion */
+    
+    .recomiendan{
+        grid-column: 1/3;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .recomiendan h1{
+        grid-column: 1/4;
+        text-indent: 90px;
+        letter-spacing: 2px;
+        font-size: 40px;
+        font-family: 'Indie Flower', cursive;
+    }
+    
+    .recomiendan figure{
+        position: relative;
+        height: 250px;
+        width: 350px;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgb(0, 0, 0,0.50);
+        cursor: pointer;
+        bottom: 120px;
+    }
+    
+    .recomiendan figure img{
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+        transition: all 500ms ease-out;
+    }
+    
+    .recomiendan figure .text{
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        background: rgb(255, 157, 112,0.6);
+        transition: all 500ms ease-out;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        margin: 10px;
+    }
+    
+    .recomiendan figure:hover > .text{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .recomiendan figure:hover > .text h3{
+        margin-top: 70px;
+        margin-bottom: 15px;
+    }
+    
+    .recomiendan figure .text h3{
+        color: white;
+        font-weight: 400px;
+        transition: all 500ms ease-out;
+        font-size: 30px;
+        font-family: 'Indie Flower', cursive;
+    }
+</style>
+
+<!-- Aqui la seccion de html -->
+
+    <section class="receta">
+        <div class="titulo">
+            <h2> Pure de coliflor </h2>
+            <img src="https://images.pexels.com/photos/7655118/pexels-photo-7655118.jpeg?cs=srgb&dl=pexels-ruslan-khmelevsky-7655118.jpg&fm=jpg">
+        </div>
+
+        <section class="ingredientes">
+            <h1>Ingredientes</h1>
+            <ul>
+                <li> 
+                    750 gramos de coliflor hervida 
+                </li>
+                <li> 
+                    1 cebolla 
+                </li>
+                <li>
+                    1 diente de ajo
+                </li>
+                <li>
+                    1 litro de caldo de pollo
+                </li>
+                <li>
+                    nuez moscada
+                </li>
+                <li>
+                    comino molido
+                </li>
+                <li>
+                    1 vaso de leche
+                </li>
+                <li>
+                    aceite de oliva 
+                </li>
+                <li>
+                    sal.
+                </li>
+            </ul>
+         
+        </section>
+
+        <div class="preparación">
+            <h1>Preparación</h1>
+            <div class="paso1">
+                <h3> 1. Limpiar </h3>
+                <p> Limpia la coliflor, lávala y sepárala en ramitos. </p>
+                <img src="https://images.pexels.com/photos/4963458/pexels-photo-4963458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <hr>
+            </div>
+           
+
+            <div class="paso2">
+                <h3>2. Cocer y mezclar con mantequilla </h3>
+                <p>  Pela las patatas y trocéalas. Cuece las patatas y la coliflor en agua salada 15 min. Escurre, aplasta y mezcla con la mantequilla, el eneldo, la pimienta y la nuez moscada. </p>
+                <img src="https://images.pexels.com/photos/12588834/pexels-photo-12588834.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <hr>
+            </div>
+
+            <div class="paso3">
+                <h3>3. Mezcla con el pure </h3>
+                <p>Limpia las judías, córtalas y cuécelas en agua con sal 12 min. Escúrrelas y mézclalas con el puré. </p>
+                <img src="https://images.pexels.com/photos/3820326/pexels-photo-3820326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <hr>
+            </div>
+
+
+            <div class="paso4">
+                <h3>4. Rellena y prepara</h3>
+                <p>Rellena con el puré un aro de repostería sobre un plato. Presiona ligeramente con el dorso de una cuchara y retira el aro con cuidado.</p>
+                <img src="https://images.pexels.com/photos/2226987/pexels-photo-2226987.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+            </div>
+
+        </div>
+
+        <div class="recomiendan">
+        <h1>Mas Recetas Para ti </h1>
+            <figure class="jamon">
+            <a href="{% url 'pedido:receta4' %}" style="text-decoration:none;">
+                <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="text">
+                    <h3>Pasta con jamon, esparragos y alcachofas</h3>
+                </a> 
+                </div>
+            
+            </figure>
+
+            <figure class="jamon">
+                <a href="{% url 'pedido:receta5' %}" style="text-decoration:none;">
+                <img src="https://images.pexels.com/photos/792027/pexels-photo-792027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="text">
+                    <h3>Pollo salteado con verduras y almendras</h3>
+                </a>
+                </div>
+               
+            </figure>
+
+            <figure class="jamon">
+                <a href="{% url 'pedido:receta8' %}" style="text-decoration:none;">
+                <img src="https://images.pexels.com/photos/7655118/pexels-photo-7655118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="text">
+                    <h3>Crema de Guisantes</h3>
+                </a>
+                </div> 
+            </figure>
+        </div>
+
+    </section>
+
+{% endblock %}

@@ -1,0 +1,260 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %} Ensalada {% endblock %}
+
+{% block content %} 
+
+<!-- Aqui los estilos de la hoja  -->
+<style>
+    .receta{
+        display: grid;
+        grid-template-columns: 35% auto;
+        grid-template-rows: auto auto auto;
+        align-items: stretch;
+        background: rgba(196, 196, 196, 0.5);
+    }
+    
+    
+    .titulo{
+        grid-column: 1/3;
+        text-align: center;
+        font-family: 'Indie Flower', cursive;
+        margin-top: 20px;
+        border-radius: 10px ;
+        width: 80%;
+        box-shadow: 0px 15px 25px rgba(177, 255, 105, 0.534);
+    }
+    
+    .titulo h2{
+        color: black;
+        transition: all 500ms ease-out;
+        font-size: 30px;
+    }
+    
+    .titulo:hover >h2{
+        color: red;
+    }
+    
+    
+    
+    .titulo img{
+        width: 500px;
+        height: 400px;
+        max-width: 100%;
+    }
+    
+    /* Aqui va el css de los ingredientes */
+    
+    .ingredientes{
+        width: 400px;
+        font-family: 'Indie Flower', cursive;
+        font-size: 20px;
+        margin-left: 30%;
+    }
+    
+    
+    
+    .preparación{
+        width: 650px;
+        margin-left: 80px;
+        box-shadow: 0px 15px 25px rgba(177, 255, 105, 0.534);
+    }
+    
+    .preparación p{
+        padding: 10px;
+        font-size: 20px;
+    }
+    
+    .preparación h3, h1{
+        padding: 10px;
+        font-size: 30px;
+        font-family: 'Indie Flower', cursive;
+        color: lightsalmon;
+    }
+    
+    .preparación img{
+        width: 200px;
+        height: 180px;
+        margin-left: 30%;
+        border-radius: 6px;
+    }
+    
+    /* Aqui va el css de los preparacion */
+    
+    .recomiendan{
+        grid-column: 1/3;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .recomiendan h1{
+        grid-column: 1/4;
+        text-indent: 90px;
+        letter-spacing: 2px;
+        font-size: 40px;
+        font-family: 'Indie Flower', cursive;
+    }
+    
+    .recomiendan figure{
+        position: relative;
+        height: 250px;
+        width: 350px;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgb(0, 0, 0,0.50);
+        cursor: pointer;
+        bottom: 120px;
+    }
+    
+    .recomiendan figure img{
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+        transition: all 500ms ease-out;
+    }
+    
+    .recomiendan figure .text{
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        background: rgb(255, 157, 112,0.6);
+        transition: all 500ms ease-out;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        margin: 10px;
+    }
+    
+    .recomiendan figure:hover > .text{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .recomiendan figure:hover > .text h3{
+        margin-top: 70px;
+        margin-bottom: 15px;
+    }
+    
+    .recomiendan figure .text h3{
+        color: white;
+        font-weight: 400px;
+        transition: all 500ms ease-out;
+        font-size: 30px;
+        font-family: 'Indie Flower', cursive;
+    }
+</style>
+
+<!-- Aqui la seccion de html -->
+
+ <section class="receta">
+        <div class="titulo">
+            <h2> Crema de Guisantes </h2>
+            <img src="https://images.pexels.com/photos/7655118/pexels-photo-7655118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+        </div>
+
+        <section class="ingredientes">
+            <h1>Ingredientes</h1>
+            <ul>
+                <li> 
+                    1 kg de guisantes frescos (solo usaremos el guisante, la vaina la desechamos)
+                </li>
+                <li> 
+                    200 gramos de ajetes
+                </li>
+                <li>
+                    1 cebolla
+                </li>
+                <li>
+                    Caldo de pollo o caldo de verduras
+                </li>
+                <li>
+                    Sal
+                </li>
+                <li>
+                    Pimienta
+                </li>
+                <li>
+                    Aceite de oliva
+                </li>
+                <li>
+                    200 ml de leche de evaporada
+                </li>
+            </ul>
+         
+        </section>
+
+        <div class="preparación">
+            <h1>Preparación</h1>
+            <div class="paso1">
+                <h3> 1. Pelar Guisantes </h3>
+                <p> Comenzamos pelando los guisantes. Desechamos las vainas. En algunas regiones usan las vainas pero a mi realmente no me gustan. </p>
+                <img src="https://images.pexels.com/photos/7511837/pexels-photo-7511837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <hr>
+            </div>
+           
+
+            <div class="paso2">
+                <h3>2. Pochar cebolla </h3>
+                <p> Pochamos la cebolla durante unos 10 minutos a fuego suave. Seguidamente agregamos los ajetes tiernos. </p>
+                <img src="https://images.pexels.com/photos/10432388/pexels-photo-10432388.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <hr>
+            </div>
+
+            <div class="paso3">
+                <h3>3. Colocar el caldo </h3>
+                <p> Incorporamos los guisantes y cubrimos de caldo de pollo. Cocinamos a fuego medio durante unos 20 minutos.</p>
+                <img src="https://images.pexels.com/photos/12077982/pexels-photo-12077982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <hr>
+            </div>
+
+
+            <div class="paso4">
+                <h3>4. Dejar Reposar</h3>
+                <p>A la hora de triturar recomiendo quitar todo el caldo y triturar con la leche evaporada. Si ponemos el caldo luego poco a poco podemos llegar a la textura deseada y no pasarnos de líquido.</p>
+                <img src="https://images.pexels.com/photos/914909/pexels-photo-914909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+            </div>
+
+        </div>
+
+        <div class="recomiendan">
+        <h1>Mas Recetas Para ti </h1>
+            <figure class="jamon">
+                <a href="{% url 'pedido:receta3' %}" style="text-decoration:none;">
+                <img src="https://images.pexels.com/photos/792027/pexels-photo-792027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="text">
+                    <h3>Pollo salteado con verduras y almendras</h3>
+                </a>
+                </div> 
+            </figure>
+
+            <figure class="jamon">
+                <a href="{% url 'pedido:receta2' %}" style="text-decoration:none;">
+                <img src="https://images.pexels.com/photos/4551971/pexels-photo-4551971.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="text">
+                    <h3>Ensalada de arroz</h3>
+                </a>
+                </div> 
+            </figure>
+
+            <figure class="jamon">
+                <a href="{% url 'pedido:receta5' %}" style="text-decoration:none;">
+                <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="text">
+                    <h3>Pasta de Aguacate y Albahaca</h3>
+                </a>
+                </div> 
+            </figure>
+        </div>
+
+
+    </section>
+      
+{% endblock %}

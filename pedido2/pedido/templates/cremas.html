@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %} Cremas {% endblock %}
 
 {% block content %} 
@@ -12,22 +14,22 @@
                     {% for cremas in cremas %}
                     <div class="col-md-4 p-4">
                         <img class="pictures" src="{{ cremas.cImage }}" >
-                        <h2 class="item-title" id="crm{{cremas.id}}"> {{cremas.name}} </h2>
+                        <h2 class="item-title" id="crem{{cremas.id}}"> {{cremas.name}} </h2>
                         <div class="form-check-inline">
                             <label  class="form-check-label">
-                                <input class="form-check-input" type="radio" name="crm{{cremas.id}}" value="{{ cremas.priceM }}">
-                                {{ cremas.priceM }} $
+                                <input class="form-check-input" type="radio" name="crema{{cremas.id}}" value="{{ cremas.priceM }}">
+                                M: {{ cremas.priceM }} $
 
                             </label>
                         </div>
                         <div class="form-check-inline">
                             <label  class="form-check-label">
-                                <input class="form-check-input" type="radio" name="crm{{cremas.id}}" value="{{ cremas.priceM }}">
-                                {{ cremas.priceL }} $
+                                <input class="form-check-input" type="radio" name="crema{{cremas.id}}" value="{{ cremas.priceM }}">
+                                L: {{ cremas.priceL }} $
                             </label>     
                         </div>
                         <div>
-                            <button class="btn-info mt-3"> Añade al carrito </button>
+                            <button class="btn-info mt-3" onclick="addCrema('{{ cremas.id }}')"> Añade al carrito </button>
                         </div>
                         
                     </div>
@@ -36,16 +38,15 @@
              
             </div>
             <div class="col-md-4 order">
-                <h2 class="text-center"> Lista de Ordenes </h2>
-                <ul></ul>
-                <h4> Total a Pagar: 0$</h4>
-             
+                <div class="bg-dark p-4 rounded text-light">
+                    <h2 class="text-center"> Lista de Ordenes </h2>
+                    <ul id="ccart"></ul>
+                    <h4 id="ctotal"> Total: 0$</h4>
+                </div> 
             </div>
-        </div>
-        
+        </div>    
     </div>
 
-
-
+    <script src="{% static 'food/js/crema.js' %}"></script>
 
 {% endblock %}

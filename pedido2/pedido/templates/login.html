@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Login {% endblock %}
+
+{% block content %} 
+
+        <div class="container-fluid p-5">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 p-4 bg-dark text-light text-center">
+                    <h3> Inicia Sesión  </h3>
+                    <a href="{% url 'pedido:signup' %}"> Registrate </a>
+                    <form method="POST">
+                        {% csrf_token %} 
+
+                        <div class="form-group p-4">
+                            <input type="text" name="username" placeholder="Usuario">
+                        </div>
+                        <div class="form-group p-4">
+                            <input type="password" name="password" placeholder="Contraseña">
+                        </div>
+                            <button type="submit" class="btn-info">Iniciar Secion</button>
+                            {%if messages %}
+                                <ul class="pt-2 text-center">
+                                    {% for msg in messages %} 
+                                    <li style="color:red;">{{ msg }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                    </form>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+
+
+{% endblock %}

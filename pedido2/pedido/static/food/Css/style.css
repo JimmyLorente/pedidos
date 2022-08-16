@@ -1,8 +1,14 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .logo{
     margin-bottom: 10px;
 }
 
-.home{
+/* .home{
     position: absolute;
     top: 0;
     left: 0;
@@ -13,29 +19,508 @@
     background-position: center center;
     background-repeat: no-repeat;
     z-index: -1;
-}
+} */
 
 .title{
     margin: 50px;
     text-align: center;
-}
+} 
 
 .pictures{
     width: 200px;
     border-radius: 10px;
     height: 150px;
-}
+} 
 
 .orders {
     position: relative;
     top: 100;
-}
+} 
 
-nav-item{
+ nav-item{
     margin-left: 70%;
 }
 
 
 li {
     display: flex;
+    margin-left: 15px;
 }
+
+button{
+    margin: 5px;
+}
+
+.IniciarC{
+    margin-left: 390px;
+}
+
+/* Aqui el css del carrusel  */
+
+.menu h2{
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 20px;
+    color: rgb(0, 0, 0);
+    font-family: cursive;
+}
+.menu, .lista{
+    width: 700px;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;  
+}
+.menu .lista ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 10s infinite alternate ease-in-out;
+}
+
+.menu .lista li{
+    list-style: none;
+    width: 100%;
+}
+
+.menu .lista img{
+    width: 100%;
+    height: 450px;
+}
+
+@keyframes slide {
+    0% {margin-left: 0%}
+    20% {margin-left: 0%}
+
+    25% {margin-left: -100%}
+    45% {margin-left: -100%}
+
+    50% {margin-left: -200%}
+    70% {margin-left: -200%}
+
+    75% {margin-left: -300%}
+    100% {margin-left: -300%}
+}
+
+/* aqui van los estilos de la mision y vision del index  */
+.vision .mision{
+    margin: 0% auto;
+    padding: 0;
+    width: 100%;
+}
+
+.vision .cuerpo{
+    background-color: rgb(233, 112, 56);
+    grid-column: 2/2;
+    width: 60%;
+    padding: 20px;
+    margin: 50px auto 0;
+    padding-bottom: 80px;
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+
+.vision h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+/* aqui la parte de opiniones y preguntas  */
+.opinion .empleo{
+    text-align: center;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.opinion .empleo img{
+    width: 100%;
+    height: 350px;
+}
+
+.opinion .empleo p{
+    font-size: 25px;
+    position: absolute;
+    background: rgb(235, 100, 51);
+    color: white;
+    padding: 10px;
+    top: 50%;
+    left: 48%;
+    transform: translate(-30%,20%);
+    font-family: 'Indie Flower', cursive;
+}
+
+.opinion .empleo h1{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    top: -9%;
+    left: 40%;
+    transform: translate(-15%,60%);
+    font-family: cursive;
+    background: rgb(230, 169, 39);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.opinion .empleo h3{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 23%;
+    left: 15%;
+    transform: translate(-4%,20%);
+    letter-spacing: 5px;
+    font-size: 22px;
+    font-family: cursive;
+    background: rgb(230, 169, 39);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.opinion .preguntas{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin-top: -50px;
+}
+
+.opinion .preguntas img{
+    width: 100%;
+    height: 350px;
+}
+
+.opinion .preguntas h1{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    top: -2%;
+    left: 45%;
+    transform: translate(-20%,40%);
+    font-family: cursive;
+    background: rgb(230, 169, 39);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.opinion .preguntas h3{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 25%;
+    left: 20%;
+    transform: translate(-4%,30%);
+    letter-spacing: 5px;
+    font-size: 22px;
+    font-family: cursive;
+    background: rgb(230, 169, 39);
+    padding: 20px;
+    border-radius: 5px;
+    
+}
+
+.opinion .preguntas p{
+    font-size: 25px;
+    position: absolute;
+    background: rgb(235, 100, 51);;
+    color: white;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%,20%);
+    font-family: 'Indie Flower', cursive;
+}
+
+/* Aqui la seccion de redes */
+.redes .instagram{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto ;
+    justify-content: space-around;
+    width: 80%;
+    padding: 20px;
+    margin: 0% auto;
+    text-align: center;
+}
+
+.redes  .instagram img{
+    width: 350px;
+    height: 340px;
+    transition: 0.5s;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.redes .instagram img:hover{
+    transform: scale(1.2);
+}
+
+.redes .instagram h1{
+    grid-column: 1/4;
+    text-indent: 90px;
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-family: cursive;
+}
+
+/* Aqui va la seccion de recetas principal */
+
+.principalR{
+    text-align: center;
+    background-color: #111;
+    color: #fafafa;
+    font-family: system-ui;
+}
+.principalR > div > h1 {
+    padding-top: 100px;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-bottom: 20px;
+    line-height: 30px;
+    text-align:center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding-top: 30px;
+}
+
+.principalR > div > p {
+    padding-bottom:1.8vh;
+    padding-left: 18vw;
+    padding-right: 18vw;
+    line-height: 30px;
+    font-size: 21px;
+    text-align: justify;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?cs=srgb&dl=pexels-trang-doan-1128678.jpg&fm=jpg");
+  
+    /* Set a specific height */
+    height: 90vh;
+
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+}
+
+.outer {
+    overflow: hidden;
+    background: #000;
+    display: block;
+
+}
+
+.separation-line {
+    background: #fafafa;
+    height: 5px;
+    align-items: center;
+    width: 100vw;
+    rotate: 35deg;
+}
+@media (max-width: 900px) {
+
+    .principalR > div > p {
+        padding-left: 15vw;
+        padding-right: 15vw;
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .principalR > div > p {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        font-size: 16px;
+    }
+}
+
+
+
+
+/* ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+
+  }
+   
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 2px;
+    height: 5px; 
+    width: 2px;
+
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  } */
+
+  .nav-links {
+    position: fixed;
+
+    opacity: 100%;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+    clip-path: circle(100px  at 50% -20%);
+    -webkit-clip-path: circle(100px  at 50% -20%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+}
+
+.nav-links.open {
+    clip-path: circle(1500px  at 50% -20%);
+    -webkit-clip-path: circle(1500px  at 50% -20%);
+    pointer-events: all;
+}
+
+
+.principalR nav a::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: #444;
+    position: absolute;
+    top:auto;
+    bottom: 0px;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.2s ease-in;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+
+    margin: 5px;
+    border-radius: 5px;
+}
+
+
+
+
+
+/*.nav-links {
+    opacity: 0;
+}*/
+.principalR .nav-links li {
+    opacity: 0;
+    letter-spacing: 20px;
+}
+.principalR .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+}
+.principalR .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+}
+.principalR .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+}
+.principalR .nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.8s;
+}
+.principalR li.fade {
+    opacity: 1;
+    letter-spacing: 3px;
+}
+
+
+
+
+
+/*Cartas de presentacion*/
+
+.card {
+position: inherit;
+box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+transition: 0.3s;
+width: 40%;
+border-radius: 5px;
+max-width:20vw;
+overflow: hidden;
+position: relative;
+min-width: 230px;
+
+}
+
+
+
+.card:hover {
+  position: inherit;
+box-shadow: 0 8px 40px 0 rgba(233, 69, 19, 0.2);
+}
+
+.containerk {
+padding: 2px 16px;
+position: inherit;
+background-color: rgb(255, 166, 31);
+}
+
+
+/* Add rounded corners to the top left and the top right corner of the image */
+.principalR img {
+  position: inherit;
+border-radius: 5px 5px 0 0;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.card {
+  position: inherit;
+  text-align: center;
+}
+
+
+.cartas {
+  position: inherit;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+
+
+
+/*Cartas de Presentacion*/
+
+
+@media screen and (min-width:1001px) {
+    .principalR nav a {
+    letter-spacing: 3px;
+    }
+}
+
+
+/* Aqui los estilos para las recetas */
+
+/* Aqui los estilos de los pagos  */

@@ -1,0 +1,269 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Ensalada {% endblock %}
+
+{% block content %} 
+
+<!-- Aqui los estilos de la hoja  -->
+<style>
+    .receta{
+        display: grid;
+        grid-template-columns: 35% auto;
+        grid-template-rows: auto auto auto;
+        align-items: stretch;
+        background: rgba(196, 196, 196, 0.5);
+    }
+    
+    
+    .titulo{
+        grid-column: 1/3;
+        text-align: center;
+        font-family: 'Indie Flower', cursive;
+        margin-top: 20px;
+        border-radius: 10px ;
+        width: 80%;
+        box-shadow: 0px 15px 25px rgba(177, 255, 105, 0.534);
+    }
+    
+    .titulo h2{
+        color: black;
+        transition: all 500ms ease-out;
+        font-size: 30px;
+    }
+    
+    .titulo:hover >h2{
+        color: red;
+    }
+    
+    
+    
+    .titulo img{
+        width: 500px;
+        height: 400px;
+        max-width: 100%;
+    }
+    
+    /* Aqui va el css de los ingredientes */
+    
+    .ingredientes{
+        width: 400px;
+        font-family: 'Indie Flower', cursive;
+        font-size: 20px;
+        margin-left: 30%;
+    }
+    
+    
+    
+    .preparación{
+        width: 650px;
+        margin-left: 80px;
+        box-shadow: 0px 15px 25px rgba(177, 255, 105, 0.534);
+    }
+    
+    .preparación p{
+        padding: 10px;
+        font-size: 20px;
+    }
+    
+    .preparación h3, h1{
+        padding: 10px;
+        font-size: 30px;
+        font-family: 'Indie Flower', cursive;
+        color: lightsalmon;
+    }
+    
+    .preparación img{
+        width: 200px;
+        height: 180px;
+        margin-left: 30%;
+        border-radius: 6px;
+    }
+    
+    /* Aqui va el css de los preparacion */
+    
+    .recomiendan{
+        grid-column: 1/3;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .recomiendan h1{
+        grid-column: 1/4;
+        text-indent: 90px;
+        letter-spacing: 2px;
+        font-size: 40px;
+        font-family: 'Indie Flower', cursive;
+    }
+    
+    .recomiendan figure{
+        position: relative;
+        height: 250px;
+        width: 350px;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgb(0, 0, 0,0.50);
+        cursor: pointer;
+        bottom: 120px;
+    }
+    
+    .recomiendan figure img{
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+        transition: all 500ms ease-out;
+    }
+    
+    .recomiendan figure .text{
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        background: rgb(255, 157, 112,0.6);
+        transition: all 500ms ease-out;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        margin: 10px;
+    }
+    
+    .recomiendan figure:hover > .text{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .recomiendan figure:hover > .text h3{
+        margin-top: 70px;
+        margin-bottom: 15px;
+    }
+    
+    .recomiendan figure .text h3{
+        color: white;
+        font-weight: 400px;
+        transition: all 500ms ease-out;
+        font-size: 30px;
+        font-family: 'Indie Flower', cursive;
+    }
+</style>
+
+<!-- Aqui la seccion de html -->
+
+    <section class="receta">
+        <div class="titulo">
+            <h2>Pasta con jamon, esparragos y alcachofas </h2>
+            <img src="https://images.pexels.com/photos/7655118/pexels-photo-7655118.jpeg?cs=srgb&dl=pexels-ruslan-khmelevsky-7655118.jpg&fm=jpg">
+        </div>
+
+        <section class="ingredientes">
+            <h1>Ingredientes</h1>
+            <ul>
+                <li> 
+                    Espárragos verdes 
+                </li>
+                <li> 
+                    Pasta corta
+                </li>
+                <li>
+                    1 limón
+                </li>
+                <li>
+                    1 pimiento verde
+                </li>
+                <li>
+                    1 cebolla morada
+                </li>
+                <li>
+                    Alcachofas
+                </li>
+                <li>
+                    Jamón serrano (puedes sustituir por fiambre de pavo)
+                </li>
+                <li>
+                    Almendras
+                </li>
+                <li>
+                    Ajo
+                </li>
+                <li>
+                   Perejil
+                </li>
+                <li>
+                    Sal y aceite
+                </li>
+            </ul>
+         
+        </section>
+
+        <div class="preparación">
+            <h1>Preparación</h1>
+            <div class="paso1">
+                <h3> 1. Corta en gajos </h3>
+                <p> Limpia, lava y corta en gajos 4 alcachofas. Cuécelas en agua salada y con el zumo de limón, 10 min. </p>
+                <img src="https://images.pexels.com/photos/6215519/pexels-photo-6215519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <hr>
+            </div>
+           
+
+            <div class="paso2">
+                <h3>2. Cocer la pasta </h3>
+                <p> Cuece 350 g de pasta en agua salada, hasta que esté al dente. Escúrrela, Limpia un manojo de espárragos, lávalos y saltéalos 2 min en un fondo de aceite. </p>
+                <img src="https://images.pexels.com/photos/6287475/pexels-photo-6287475.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <hr>
+            </div>
+
+            <div class="paso3">
+                <h3>3. Mezclar ajo y alcachofas </h3>
+                <p>Mezcla el ajo pelado y picado con 20 g de almendras y las alcachofas escurridas. </p>
+                <img src="https://images.pexels.com/photos/10432395/pexels-photo-10432395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <hr>
+            </div>
+
+
+            <div class="paso4">
+                <h3>4. Sazona</h3>
+                <p>Sazona, añade la pasta y sirve con unas lonchas de jamón y perejil.</p>
+                <img src="https://images.pexels.com/photos/6287486/pexels-photo-6287486.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+            </div>
+
+        </div>
+
+        <div class="recomiendan">
+        <h1>Mas Recetas Para ti </h1>
+            <figure class="jamon">
+                <a href="{% url 'pedido:receta3' %}" style="text-decoration:none;">
+                <img src="https://images.pexels.com/photos/792027/pexels-photo-792027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="text">
+                    <h3>Ensalada con naranja, queso y pistachos</h3>
+                </a>
+                </div> 
+            </figure>
+
+            <figure class="jamon">
+                <a href="{% url 'pedido:receta4' %}" style="text-decoration:none;">
+                <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="text">
+                    <h3>Pollo salteado con verduras y almendras</h3>
+                </a>
+                </div> 
+            </figure>
+
+            <figure class="jamon">
+                <a href="{% url 'pedido:receta6' %}" style="text-decoration:none;">
+                <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="text">
+                    <h3>Crema de Guisantes</h3>
+                </a>
+                </div> 
+            </figure>
+        </div>
+
+
+    </section>
+
+{% endblock %}

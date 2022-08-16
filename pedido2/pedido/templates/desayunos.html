@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %} Desayunos {% endblock %}
 
 {% block content %} 
@@ -12,22 +14,22 @@
                     {% for desayunos in desayunos %}
                     <div class="col-md-4 p-4">
                         <img class="pictures" src="{{ desayunos.dImage }}" >
-                        <h2 class="item-title" id="dsy{{desayunos.id}}"> {{desayunos.name}} </h2>
+                        <h2 class="item-title" id="desa{{desayunos.id}}"> {{desayunos.name}} </h2>
                         <div class="form-check-inline">
                             <label  class="form-check-label">
-                                <input class="form-check-input" type="radio" name="dsy{{desayunos.id}}" value="{{ desayunos.priceM }}">
-                                {{ desayunos.priceM }} $
+                                <input class="form-check-input" type="radio" name="desayunos{{desayunos.id}}" value="{{ desayunos.priceM }}">
+                                M: {{ desayunos.priceM }} $
 
                             </label>
                         </div>
                         <div class="form-check-inline">
                             <label  class="form-check-label">
-                                <input class="form-check-input" type="radio" name="dsy{{desayunos.id}}" value="{{ desayunos.priceM }}">
-                                {{ desayunos.priceL }} $
+                                <input class="form-check-input" type="radio" name="desayunos{{desayunos.id}}" value="{{ desayunos.priceM }}">
+                                L: {{ desayunos.priceL }} $
                             </label>     
                         </div>
                         <div>
-                            <button class="btn-info mt-3"> Añade al carrito </button>
+                            <button class="btn-info mt-3" onclick="addDesayunos('{{ desayunos.id }}')"> Añade al carrito </button>
                         </div>
                         
                     </div>
@@ -35,17 +37,18 @@
                 </div>
              
             </div>
-            <div class="col-md-4 order">
-                <h2 class="text-center"> Lista de Ordenes </h2>
-                <ul></ul>
-                <h4> Total a Pagar: 0$</h4>
-             
-            </div>
-             
+                <div class="col-md-4 order">
+                    <div class="bg-dark p-4 rounded text-light">
+                        <h2 class="text-center"> Lista de Ordenes </h2>
+                        <ul id="dcart"></ul>
+                        <h4 id="dtotal"> Total: 0$</h4>
+                    </div> 
+                </div>          
             </div>
         </div>
     </div>
 
+    <script src="{% static 'food/js/desayunos.js' %}"></script>
 
 
 

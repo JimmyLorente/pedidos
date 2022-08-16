@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+
+{% block title %} recetas {% endblock %}
+
+{% block content %}
+
+<div class="principalR">
+    <div class="parallax">
+    </div>
+
+
+    <div class="outer"><div class="separation-line"></div></div>
+    <h1> Recetas </h1>
+
+
+    <div class="cartas">
+
+        <div class="card">
+         <img src="https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg?cs=srgb&dl=pexels-chan-walrus-1059905.jpg&fm=jpg" alt="Avatar" style="width:100%">
+            <div class="containerk">
+            <h4><b>Ensalada con naranja, queso y pistachos</b></h4>
+            <p class="texto">Ensalada con naranja, queso de cabra y pistachos, estos aportan vitamina B1 y vitamina B6, riboflavina, vitamina E, vitamina K y ácido fólico. Si no tienes, sustitúyelos por otro fruto seco.</p>
+            <a href="{% url 'pedido:receta1' %}"> 
+                <button type="button" class="btn btn-info"> Receta </button>
+            </a>
+            </div>
+        </div>
+      
+        <div class="card">
+        <img src="https://images.pexels.com/photos/772518/pexels-photo-772518.png?cs=srgb&dl=pexels-cook-eat-772518.jpg&fm=jpg" alt="Avatar" style="width:100%">
+        <div class="containerk">
+          <h4><b>Crema de Guisantes</b></h4>
+          <p class="texto">Las cremas son perfectas para invierno y verano. Puedes aprovechar para hacer cremas saludables con las verduras que tengas en el frigorífico. Los guisantes son una fuente de proteína vegetal y numerosos minerales y previenen las enfermedades del corazón gracias a su contenido en luteína, que reduce colesterol. ¡Cuídate con una buena crema de guisantes.</p>
+          <a href="{% url 'pedido:receta2' %}"> 
+            <button type="button" class="btn btn-info"> Receta </button>
+        </a>
+        </div>
+        </div>
+        
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/7799796/pexels-photo-7799796.jpeg?cs=srgb&dl=pexels-anna-pyshniuk-7799796.jpg&fm=jpg" alt="Avatar" style="width:100%">
+            <div class="containerk">
+            <h4><b>Crema de zanahoria</b></h4>
+            <p class="texto">Anota esto: las zanahorias son ricas en vitaminas (C, E, B3, B6, B1, B2); carotenos, retinol y ácido fólico. ¿Te parece preparar una crema con ellas?</p>
+            <a href="{% url 'pedido:receta3' %}"> 
+                <button type="button" class="btn btn-info"> Receta </button>
+            </a>
+            
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.pexels.com/photos/7243147/pexels-photo-7243147.jpeg?cs=srgb&dl=pexels-blue-bird-7243147.jpg&fm=jpg" alt="Avatar" style="width:100%">
+        <div class="containerk">
+        <h4><b>Crema de coliflor</b></h4>
+        <p class="texto">La coliflor (una verdura de la familia del brócoli, romanescu, repollo o col) es saludable por sus nutrientes, que ayudan a reducir el riesgo de padecer varias enfermedades. Tienen pocas calorías.</p>
+        <a href="{% url 'pedido:receta4' %}"> 
+            <button type="button" class="btn btn-info"> Receta </button>
+        </a>
+    </div>
+  </div>
+
+    <div class="card">
+        <img src="https://images.pexels.com/photos/1487511/pexels-photo-1487511.jpeg?cs=srgb&dl=pexels-engin-akyurt-1487511.jpg&fm=jpg" alt="Avatar" style="width:100%">
+        <div class="containerk">
+            <h4><b>Pasta de Aguacate y Albahaca</b></h4>
+            <p class="texto">La pasta es saludable. No siempre se acompaña de salsas extra calóricas. La pasta integral aporta más fibra. El aguacate ya sabemos que es uno de los superalimentos de moda.</p>
+            <a href="{% url 'pedido:receta5' %}"> 
+                <button type="button" class="btn btn-info"> Receta </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.pexels.com/photos/5737239/pexels-photo-5737239.jpeg?cs=srgb&dl=pexels-rodnae-productions-5737239.jpg&fm=jpg" alt="Avatar" style="width:100%">
+        <div class="containerk">
+            <h4><b>Pasta con jamon, esparragos y alcachofas</b></h4>
+            <p class="texto">Los espárragos verdes tienen muy pocas calorías y aportan mucha fibra, también vitaminas, sobre todo A, B1, B2, B6, C y E; y minerales (magnesio, fósforo, calcio y potasio). Y las alcachofas contienen fósforo, hierro, magnesio, calcio, potasio y vitaminas (B1, C y niacina, un tipo de vitamina B).</p>
+            <a href="{% url 'pedido:receta6' %}"> 
+                <button type="button" class="btn btn-info"> Receta </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <img src="https://images.pexels.com/photos/12968279/pexels-photo-12968279.jpeg?cs=srgb&dl=pexels-valeriia-harbuz-12968279.jpg&fm=jpg" alt="Avatar" style="width:100%">
+        <div class="containerk">
+            <h4><b>Ensalada de garbanzos con atun</b></h4>
+            <p class="texto">Las legumbres siempre aportan beneficios a tu salud. Y en conserva son perfectas para consumirlas sin invertir demasiado tiempo en cocinarlas. Los garbanzos son una fuente de vitaminas del grupo B, sobre todo, aportan ácido fólico y vitamina A y un poco de vitamina C. También tiene muchos ácidos nucléicos.</p>
+            <a href="{% url 'pedido:receta7' %}"> 
+                <button type="button" class="btn btn-info"> Receta </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?cs=srgb&dl=pexels-julie-aagaard-2097090.jpg&fm=jpg" alt="Avatar" style="width:100%">
+        <div class="containerk">
+            <h4><b>Pollo salteado con verduras y almendras</b></h4>
+            <p class="texto">Esta receta es saludable y muy apetecible en sabor y color. Además, la mezcla de texturas resulta agradable al paladar. Añadir frutos secos a los platos, como en este las almendras, es un extra rico en fibra. Lo bueno de este plato es que puedes usar las verduras que ya tengas en casa.</p>
+            <a href="{% url 'pedido:receta8' %}"> 
+                <button type="button" class="btn btn-info"> Receta </button>
+            </a>
+        </div>
+    </div>
+
+
+    </div>
+
+</div>
+
+{% endblock %}

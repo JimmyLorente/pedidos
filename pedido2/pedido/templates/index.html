@@ -1,10 +1,82 @@
 {% extends 'base.html' %}
 
+
 {% block title %} Inicio {% endblock %}
 
-{% block content %} 
 
+
+{% block content %}
     <div class="home"></div>
+    <!-- Aqui empieza el carrusel -->
+    <div class="menu">
+            <h2> ¿Que Prepararemos Hoy? </h2>
+
+        <div class="lista">
+            <ul>
+                <li><img src="https://images.pexels.com/photos/704571/pexels-photo-704571.jpeg?cs=srgb&dl=pexels-daria-shevtsova-704571.jpg&fm=jpg" alt="Desayuno"></li>
+                <li><img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?cs=srgb&dl=pexels-lisa-fotios-1279330.jpg&fm=jpg" alt="Almuerzo"></li>
+                <li><img src="https://images.pexels.com/photos/1277483/pexels-photo-1277483.jpeg?cs=srgb&dl=pexels-valeria-boltneva-1277483.jpg&fm=jpg" alt="Crema"></li>
+                <li><img src="https://images.pexels.com/photos/109275/pexels-photo-109275.jpeg?cs=srgb&dl=pexels-lisa-fotios-109275.jpg&fm=jpg" alt="bebida"></li>
+            </ul>
+        </div>
+
+    </div> 
+
+    <!-- Aqui va la mision y vision  -->
+    <div class="vision">
+        <section class="mision">
+            <article class="cuerpo">
+                <p>
+                    <h1> Fresh Life </h1>
+                    El sistema Fresh Life será una página diseñada y enfocada para crear unos mejores hábitos 
+                    de alimentación en nuestros usuarios permitiéndoles el poder alimentarse mejor con productos 
+                    que tengan a su disposición o mediante pedidos que nuestra página facilitara a los usuarios y 
+                    ayudará a conocer más restaurantes que ofrecen  una mejor alternativa al momento de alimentarse
+                    Crear un sistema que nos permita acceder a recetas saludables y lugares de ventas de comida sana 
+                    por lo cual nos vamos a enfocar más en el sector de Quito con el fin de crear un hábito en las personas 
+                    sobre la comida saludable. Con este sistema brindaremos la ubicación de los lugares de comida sana para 
+                    nuestros clientes y  de los usuarios en general. 
+    
+                    Para evitar los gastos de los clientes, crearemos una sección que contengan varias recetas de alimentos 
+                    que sean fácilmente consumibles y accesibles en donde el cliente lo pueda replicar, por lo cual se mostrará 
+                    mediante videotutoriales y una descripción de los productos que necesita.
+    
+        
+                </p>
+            </article>    
+        </section> 
+    </div>
+
+    <!--Aqui va el cuadro de opiniones y preguntas -->
+    <div class="opinion">
+        <section class="funcion">
+            <section class="empleo">
+                <h1> Tu opinion nos importa  </h1>
+                <h3> Llena el formulario y dejanos conocer tu experiencia con la pagina  </h3>
+                <a href="{% url 'pedido:form' %}" style="text-decoration:none;"> <p> Haz click y unete </p> </a>
+                 
+                <img src="https://images.pexels.com/photos/4533611/pexels-photo-4533611.jpeg?cs=srgb&dl=pexels-kelly-4533611.jpg&fm=jpg">
+            </section>
+           
+            <section class="preguntas">
+                <h1> ¿Tienes preguntas? </h1>
+                <h3> Nuestros administradores estan listos para resolverlas </h3>
+                <a href="{% url 'pedido:preguntas' %}" style="text-decoration:none;"> <p> Haz click y unete</p> </a>
+                <img src="https://images.pexels.com/photos/5428830/pexels-photo-5428830.jpeg?cs=srgb&dl=pexels-olya-kobruseva-5428830.jpg&fm=jpg">
+            </section>
+        </section>
+    </div>
+
+    <!--Aqui la seccion de redes -->
+    <div class="redes">
+        <section class="instagram">
+            <h1> Recuerda Unirte a nuestro Instagram </h1>
+            <img src="https://images.pexels.com/photos/1120575/pexels-photo-1120575.jpeg?cs=srgb&dl=pexels-suzy-hazelwood-1120575.jpg&fm=jpg">
+            <img src="https://images.pexels.com/photos/1765602/pexels-photo-1765602.jpeg?cs=srgb&dl=pexels-lisa-fotios-1765602.jpg&fm=jpg">
+            <img src="https://images.pexels.com/photos/2673876/pexels-photo-2673876.jpeg?cs=srgb&dl=pexels-engin-akyurt-2673876.jpg&fm=jpg">
+        </section>
+    </div>
+   
 
 
 

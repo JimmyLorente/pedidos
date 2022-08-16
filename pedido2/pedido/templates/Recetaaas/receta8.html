@@ -1,0 +1,275 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Ensalada {% endblock %}
+
+{% block content %} 
+
+
+<!-- Aqui los estilos de la hoja  -->
+<style>
+    .receta{
+        display: grid;
+        grid-template-columns: 35% auto;
+        grid-template-rows: auto auto auto;
+        align-items: stretch;
+        background: rgba(196, 196, 196, 0.5);
+    }
+    
+    
+    .titulo{
+        grid-column: 1/3;
+        text-align: center;
+        font-family: 'Indie Flower', cursive;
+        margin-top: 20px;
+        border-radius: 10px ;
+        width: 80%;
+        box-shadow: 0px 15px 25px rgba(177, 255, 105, 0.534);
+    }
+    
+    .titulo h2{
+        color: black;
+        transition: all 500ms ease-out;
+        font-size: 30px;
+    }
+    
+    .titulo:hover >h2{
+        color: red;
+    }
+    
+    
+    
+    .titulo img{
+        width: 500px;
+        height: 400px;
+        max-width: 100%;
+    }
+    
+    /* Aqui va el css de los ingredientes */
+    
+    .ingredientes{
+        width: 400px;
+        font-family: 'Indie Flower', cursive;
+        font-size: 20px;
+        margin-left: 30%;
+    }
+    
+    
+    
+    .preparación{
+        width: 650px;
+        margin-left: 80px;
+        box-shadow: 0px 15px 25px rgba(177, 255, 105, 0.534);
+    }
+    
+    .preparación p{
+        padding: 10px;
+        font-size: 20px;
+    }
+    
+    .preparación h3, h1{
+        padding: 10px;
+        font-size: 30px;
+        font-family: 'Indie Flower', cursive;
+        color: lightsalmon;
+    }
+    
+    .preparación img{
+        width: 200px;
+        height: 180px;
+        margin-left: 30%;
+        border-radius: 6px;
+    }
+    
+    /* Aqui va el css de los preparacion */
+    
+    .recomiendan{
+        grid-column: 1/3;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .recomiendan h1{
+        grid-column: 1/4;
+        text-indent: 90px;
+        letter-spacing: 2px;
+        font-size: 40px;
+        font-family: 'Indie Flower', cursive;
+    }
+    
+    .recomiendan figure{
+        position: relative;
+        height: 250px;
+        width: 350px;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgb(0, 0, 0,0.50);
+        cursor: pointer;
+        bottom: 120px;
+    }
+    
+    .recomiendan figure img{
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+        transition: all 500ms ease-out;
+    }
+    
+    .recomiendan figure .text{
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        background: rgb(255, 157, 112,0.6);
+        transition: all 500ms ease-out;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        margin: 10px;
+    }
+    
+    .recomiendan figure:hover > .text{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .recomiendan figure:hover > .text h3{
+        margin-top: 70px;
+        margin-bottom: 15px;
+    }
+    
+    .recomiendan figure .text h3{
+        color: white;
+        font-weight: 400px;
+        transition: all 500ms ease-out;
+        font-size: 30px;
+        font-family: 'Indie Flower', cursive;
+    }
+</style>
+
+<!-- Aqui la seccion de html -->
+
+    <section class="receta">
+        <div class="titulo">
+            <h2> Pollo salteado con verduras y almendras </h2>
+            <img src="https://images.pexels.com/photos/7655118/pexels-photo-7655118.jpeg?cs=srgb&dl=pexels-ruslan-khmelevsky-7655118.jpg&fm=jpg">
+        </div>
+
+        <section class="ingredientes">
+            <h1>Ingredientes</h1>
+            <ul>
+                <li> 
+                   400 g de pechuga de pollo
+                </li>
+                <li> 
+                    100g de zanahorias 
+                </li>
+                <li>
+                    150 g de espárragos verdes
+                </li>
+                <li>
+                   El zumo de 1/2 limón
+                </li>
+                <li>
+                    150 g de judías verdes
+                </li>
+                <li>
+                    1 calabacín
+                </li>
+                <li>
+                    Salsa de soja
+                </li>
+                <li>
+                    1 cebolla morada
+                </li>
+                <li>
+                    40 g de almendras
+                </li>
+                <li>
+                    Una ramita de tomillo
+                </li>
+                <li>
+                    2 cucharadas de aceiten de oliva virgen
+                </li>
+                <li>
+                    100 g de ajos tiernos
+
+                </li>
+            </ul>
+         
+        </section>
+
+        <div class="preparación">
+            <h1>Preparación</h1>
+            <div class="paso1">
+                <h3> 1. Limpiar los esparragos </h3>
+                <p> Limpia los espárragos y retira la base de su tallo. </p>
+                <img src="https://images.pexels.com/photos/4397792/pexels-photo-4397792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <hr>
+            </div>
+           
+
+            <div class="paso2">
+                <h3>2. Pelar y lavar las zanahorias </h3>
+                <p> Pela las zanahorias, lávalas y parte en tiras. </p>
+                <img src="https://images.pexels.com/photos/9016642/pexels-photo-9016642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <hr>
+            </div>
+
+            <div class="paso3">
+                <h3>3. Prepar el pollo </h3>
+                <p>Saltea el pollo cortado en tiras en el aceite, 3 min. </p>
+                <img src="https://images.pexels.com/photos/11021810/pexels-photo-11021810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <hr>
+            </div>
+
+
+            <div class="paso4">
+                <h3>4. Sirve</h3>
+                <p>Vierte el zumo de limón, 1 cucharada de salsa de soja y el tomillo lavado, saltea unos 2 min más y sírvelo.</p>
+                <img src="https://images.pexels.com/photos/2741458/pexels-photo-2741458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+            </div>
+
+        </div>
+
+        <div class="recomiendan">
+        <h1>Mas Recetas Para ti </h1>
+            <figure class="jamon">
+                <a href="{% url 'pedido:receta5' %}" style="text-decoration:none;">
+                <img src="https://images.pexels.com/photos/792027/pexels-photo-792027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="text">
+                    <h3>Pasta con jamon, esparragos y alcachofas</h3>
+                </a>
+                </div> 
+            </figure>
+
+            <figure class="jamon">
+                <a href="{% url 'pedido:receta4' %}" style="text-decoration:none;">
+                <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="text">
+                    <h3>CREMA DE ZANAHORIA</h3>
+                </a>
+                </div> 
+            </figure>
+
+            <figure class="jamon">
+                <a href="{% url 'pedido:receta3' %}" style="text-decoration:none;">
+                <img src="https://images.pexels.com/photos/7655118/pexels-photo-7655118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="text">
+                    <h3>Crema de Guisantes</h3>
+                </a>
+                </div> 
+            </figure>
+        </div>
+
+
+
+    </section>
+
+{% endblock %}
