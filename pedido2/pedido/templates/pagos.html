@@ -1,0 +1,286 @@
+{% extends 'base.html' %}
+
+{% block title %} Desayunos {% endblock %}
+
+{% block content %} 
+
+<div class="container">
+<!-- Aqui los estilos de los pagos  -->
+<style>
+    *{
+        font-family: 'Poppins', sans-serif;
+        margin:0; padding:0;
+        box-sizing: border-box;
+        outline: none; border:none;
+        text-transform: capitalize;
+        transition: all .2s linear;
+      }
+      
+      .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:25px;
+        min-height: 100vh;
+        background: orange;
+      }
+      
+      .container form{
+        padding:20px;
+        width:700px;
+        background: #fff;
+        box-shadow: 0 5px 10px rgba(0,0,0,.1);
+      }
+      
+      .container form .row{
+        display: flex;
+        flex-wrap: wrap;
+        gap:15px;
+      }
+      
+      .container form .row .col{
+        flex:1 1 250px;
+      }
+      
+      .container form .row .col .title{
+        font-size: 20px;
+        color:#333;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+      }
+      
+      .container form .row .col .inputBox{
+        margin:15px 0;
+      }
+      
+      .container form .row .col .inputBox span{
+        margin-bottom: 10px;
+        display: block;
+      }
+      
+      .container form .row .col .inputBox input{
+        width: 100%;
+        border:1px solid #ccc;
+        padding:10px 15px;
+        font-size: 15px;
+        text-transform: none;
+      }
+      
+      .container form .row .col .inputBox input:focus{
+        border:1px solid #000;
+      }
+      
+      .container form .row .col .flex{
+        display: flex;
+        gap:15px;
+      }
+      
+      .container form .row .col .flex .inputBox{
+        margin-top: 5px;
+      }
+      
+      .container form .row .col .inputBox img{
+        height: 34px;
+        margin-top: 5px;
+        filter: drop-shadow(0 0 1px #000);
+      }
+      
+      button{
+        background-color: white;
+        color:white
+      }
+
+</style>
+
+
+<!--Aqui inicia el script-->
+
+    <script type=text/javascript>
+        function validar();
+            var form = document.form;
+
+            if(form.nombre.value==0){
+                alert("el campo esta vacio")
+                form.nombre.value="";
+                form.nombre.focus();
+                return false;
+            }
+
+            alert("daros enviados");
+            form.submit();
+
+
+            if(form.correo.value==0){
+                alert("El campo correo esta vacio")
+                form.correo.value="";
+                form.correo.focus();
+                return false;
+            }
+
+            if(form.direccion.value==0){
+                alert("El campo correo esta vacio")
+                form.direccion.value="";
+                form.direccion.focus();
+                return false;
+            }
+
+            if(form.provincia.value==0){
+                alert("el campo esta vacio")
+                form.provincia.value="";
+                form.provincia.focus();
+                return false;
+            }
+
+            if(form.ciudad.value==0){
+                alert("El campo correo esta vacio")
+                form.ciudad.value="";
+                form.ciudad.focus();
+                return false;
+            }
+
+            if(form.codigo.value==0){
+                alert("El campo correo esta vacio")
+                form.codigo.value="";
+                form.codigo.focus();
+                return false;
+            }
+
+            if(form.nombre.tarjeta==0){
+                alert("el campo esta vacio")
+                form.tarjeta.value="";
+                form.tarjeta.focus();
+                return false;
+            }
+
+            if(form.tarjetaN.value==0){
+                alert("El campo correo esta vacio")
+                form.tarjetaN.value="";
+                form.tarjetaN.focus();
+                return false;
+            }
+
+            if(form.numero.value==0){
+                alert("El campo correo esta vacio")
+                form.numero.value="";
+                form.numero.focus();
+                return false;
+            }
+
+            if(form.mes.value==0){
+                alert("el campo esta vacio")
+                form.mes.value="";
+                form.mes.focus();
+                return false;
+            }
+
+            if(form.año.value==0){
+                alert("El campo correo esta vacio")
+                form.años.value="";
+                form.año.focus();
+                return false;
+            }
+
+            if(form.cvv.value==0){
+                alert("El campo correo esta vacio")
+                form.cvv.value="";
+                form.cvv.focus();
+                return false;
+            }
+
+    </script>
+
+<!--Aqui termina el script-->
+
+    <form name="form" method="post" action="#">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">Realiza tu pago</h3>
+
+                <div class="inputBox">
+                    <label for="nombre">Nombre :</label>
+                    <input type="text" placeholder="Ingresa tu nombre" required="">
+                </div>
+
+
+                <div class="inputBox">
+                    <label for="correo">Correo :</label>
+                    <input type="emali" placeholder="Ingresa tu correo">
+                </div>
+                <div class="inputBox">
+                    <label for="direccion">Direccion :</label>
+                    <input type="text" placeholder="Ingresa tu direccion">
+                </div>
+                <div class="inputBox">
+                    <label for="provincia">Provincia :</label>
+                    <input type="text" placeholder="Ingresa tu provincia">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <label for="ciudad">Cuidad :</label>
+                        <input type="text" placeholder="Ingresa tu ciudad">
+                    </div>
+                    <div class="inputBox">
+                        <label for="codigo">Codigo Postal :</label>
+                        <input type="text" placeholder="Ejemplo: 123 456">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">Pago</h3>
+
+                <div class="inputBox">
+                    <label for="tarjeta">Tarjetas :</label>
+                    <img src="images/tarjetas.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <label for="tarjetaN">Nombre en la tarjeta :</label>
+                    <input type="text" placeholder="Bryan">
+                </div>
+                <div class="inputBox">
+                    <label for="numero">Numero de la tarjeta de credito :</label>
+                    <input type="number" placeholder="1111-2222-3333-4444-5555">
+                </div>
+                <div class="inputBox">
+                    <label for="mes">Mes de caducidad :</label>
+                    <input type="text" placeholder="Enero">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <label for="años">Año de caducidad :</label>
+                        <input type="number" placeholder="2023">
+                    </div>
+                    <div class="inputBox">
+                        <label for="cvv">CVV :</label>
+                        <input type="text" placeholder="1234">
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+        <a name="envio" id="envio" class="btn btn-success"  href="{% url 'pedido:realizado' %}" role="button">Realizar pago</a> 
+
+        <button onclick="validar();">Realizar pago</button>
+
+
+
+    </form>
+
+
+</div>    
+
+
+
+
+
+
+
+{% endblock %}

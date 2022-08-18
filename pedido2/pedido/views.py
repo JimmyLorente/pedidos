@@ -4,7 +4,7 @@ from unittest import loader
 from urllib import request
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Almuerzo, Ensalada, Crema, Desayuno, Task, Receta
+from .models import Almuerzo, Ensalada, Crema, Desayuno, Task, Receta, Formulario
 from .forms import NewUserForm, FormularioOpinion
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -121,13 +121,14 @@ def logOut(request):
     logout(request)
     return redirect('index')
 
+# Formulario de opinion 
 def form(request):
     submitted = False
     if request.method == "POST":
         formi = FormularioOpinion(request.POST)
         if formi.is_valid():
             formi.save()
-            return  HttpResponseRedirect('/form?submitted=True')
+            return redirect('index')
     else:
         formi = FormularioOpinion
         if 'submitted' in request.GET:

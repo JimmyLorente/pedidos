@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} preguntas {% endblock %}
+
+{% block content %}
+
+<!-- Aqui inican los estilos de las preguntas  -->
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .background{
+        width: 1600px;
+        max-width: 100%;
+        background-size: cover;
+        backdrop-filter: blur(5px);
+    }
+    
+    .contenedor{
+        width: 90%;
+        margin: 100px auto;
+        background-color: rgb(228, 195, 153);
+    }
+    
+    .grupo{
+        box-shadow: 0 0 15px -1px black;
+        padding: 30px;
+    }
+    .titulo{
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .item{
+        box-shadow: 0 0 15px -1px rgb(245, 150, 150);
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+    
+    .pregunta{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgb(255, 191, 95);
+        padding: 20px 20px 20px 80px;
+        transition: .4s;
+    }
+    
+    .mas{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 15px -1px rgb(248, 134, 68);
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: .4s;
+    }
+    
+    .mas:hover{
+        box-shadow: 0 0 15px -1px rgb(255, 6, 6);
+    }
+    
+    .pregunta span{
+        position: absolute;
+        left: 10px;
+        font-size: 3rem;
+        top: 10px;
+        opacity: .1;
+    }
+    
+    .respuesta{
+        position: relative;
+        padding: 0 20px 0 80px;
+        overflow: hidden;
+        height: 0;
+        transition: .4s;
+    }
+    
+    p{
+        font-size: 1.3rem;
+    } 
+    
+    .respuesta span{
+        position: absolute;
+        left: 10px;
+        font-size: 3rem;
+        top: -10px;
+        opacity: .5;
+    }
+    
+    .barra_inicio{
+        width: 1400px !important;
+        max-width: 100%;
+        height: 110px;
+    }
+</style>
+ 
+
+<!-- Aqui empieza el contenedor -->
+<div class="contenedor">
+
+    <div class="fila">
+        <div class="grupo">
+            <div class="titulo">
+                <h3> Preguntas Frecuentes </h3>
+            </div>
+
+            <div class="item">
+                <div class="pregunta">
+                    <h3> ¿Que beneficios tiene la comida sana? <span> ? </span> </h3>
+                    <div class="mas"> <i> + </i> </div>
+                </div>
+                <div class="respuesta">
+                    <p>
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, excepturi 
+                        neque voluptates illo ullam totam, suscipit
+                        nihil eum ratione earum repellendus fugit ex dolor obcaecati, 
+                        vero facere qui repellat delectus? <span> = </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="pregunta">
+                    <h3> ¿Que deberiamos comer ? <span> ? </span> </h3>
+                    <div class="mas"> <i> + </i> </div>
+                </div>
+                <div class="respuesta">
+                    <p>
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, excepturi 
+                        neque voluptates illo ullam totam, suscipit
+                        nihil eum ratione earum repellendus fugit ex dolor obcaecati, 
+                        vero facere qui repellat delectus? <span> = </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="pregunta">
+                    <h3> ¿Por que comer sano es bueno  ? <span> ? </span> </h3>
+                    <div class="mas"> <i> + </i> </div>
+                </div>
+                <div class="respuesta">
+                    <p>
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, excepturi 
+                        neque voluptates illo ullam totam, suscipit
+                        nihil eum ratione earum repellendus fugit ex dolor obcaecati, 
+                        vero facere qui repellat delectus? <span> = </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="pregunta">
+                    <h3> ¿ Las mejores dietas para ti  ? <span> ? </span> </h3>
+                    <div class="mas"> <i> + </i> </div>
+                </div>
+                <div class="respuesta">
+                    <p>
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, excepturi 
+                        neque voluptates illo ullam totam, suscipit
+                        nihil eum ratione earum repellendus fugit ex dolor obcaecati, 
+                        vero facere qui repellat delectus? <span> = </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="pregunta">
+                    <h3> ¿ Esperamos que comas muy bien  ? <span> ? </span> </h3>
+                    <div class="mas"> <i> + </i> </div>
+                </div>
+                <div class="respuesta">
+                    <p>
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, excepturi 
+                        neque voluptates illo ullam totam, suscipit
+                        nihil eum ratione earum repellendus fugit ex dolor obcaecati, 
+                        vero facere qui repellat delectus? <span> = </span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script  src="{% static 'food/js/preguntas.js' %}"></script>
+
+{% endblock %}

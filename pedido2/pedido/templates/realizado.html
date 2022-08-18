@@ -1,0 +1,50 @@
+{% block title %}{% endblock %}
+
+{% block content %} 
+
+<!--los estilos -->
+<style>
+    body {
+        text-align: center;
+        background-color: #00ad13;
+      }
+      
+      .fa-circle-check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 8em;
+        margin-top: 15%;
+      }
+      
+      p {
+        color: #fff;
+        font-size: 2em;
+      }
+      
+      a {
+        text-decoration: none;
+      }
+      
+      span {
+        color: #fff;
+        cursor: pointer;
+      }
+      
+      span:hover {
+        color: #ccc;
+      }
+    
+</style>
+
+<!-- Aqui el html  -->
+<body class="realizado">
+  
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACCklEQVRoge2Zv0vEMBTHPyoO4h04iIK4iTg4uLs46CC4CrqJuDn4B5z+F4KD/4Ag4uIgyN2iODo5iKCgo+j5G0ER4+BFerG9Jr20uUg/ELi0r++9b1/SJj3IyfGOY0DU2jtQBkadZpQQEdLugTGXSSUhTIgALoFuh3kZEyVEAGsO8zKmkZAq0OUuNTMaCRHAnM1g7TadGTLjMLYRcRU5d5eaPh3EC3m1GTCtoTWtYfNpM2BaQpY0bK5Sim2NfuCD+KG1aTNoGhVZADo17I5TiG2VM+Kr8QUMuEpQhwniRQjgxHZg20NLZ5ID7FuOW8cRencz2I4C1/cAbwl8mLZnYBcYiRLyktCxZDkDEerCczBMyGmTQk4yFiKA7TAhe00KyVqEAJ5k8OBkb/k3bQi/y5ygkGsHiTRLRf7wuSIPQEl2fBYyD1zIjs9CFoOdNuXkM1A0dCh9iIZW9rkF+mRHXaL4NOE7gh1ViE/DqxLs+Cqk7okF/g6tuicW+FuRRfWAr0Im1QO+CvmDKuQOyx/OUqISb2K+L5FktXS/AYbUpMP27FHDqwQUgNWGtyFdysA4P38WxbJO+J0o1M4XleOSLKqxFZV0WEWi3iUrNTErUc4yYMrEeJbWnSOPUUmbzJFWoGxi3EuyiiT9eKHbqsCwiRCAA03nh4FrCsAGP/sEmwKegJ0kInJycv4h38+02ZwfXvuCAAAAAElFTkSuQmCC">
+    <H1>¡GRACIAS POR TU COMPRA!</p>
+    <a href="{% url 'index' %}"><span>Ir al inicio</span></a>
+  
+    </body>
+  
+{% endblock %}

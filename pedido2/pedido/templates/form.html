@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block title %} opinion {% endblock %}
+
+{% block content  %}
+
+<center>
+<div class="formulario">
+    <h1>Dejanos Conocer tu Opinion </h1>
+    <br/><br/>
+
+    {% if submitted %}
+        Tu formulario fue subido con exito!!!
+    {% else %}
+
+    
+        <form action="{% url 'index' %}" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            {% if user.is_authenticated %}
+                <button type="submit" value="Submit" class="btn-sucsess"> Enviar </button>
+
+            {% else %}
+                    <div class="ml-auto m-4">
+                        <a href="{% url 'pedido:login' %}"> Iniciar  Sesion   </button>
+                    </div> 
+            {% endif %}
+
+        </form>
+    {% endif %}
+</div>
+    
+</center>
+
+
+{% endblock  %}

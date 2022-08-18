@@ -17,3 +17,7 @@ class FormularioOpinion(ModelForm):
     class Meta:
         model = Formulario
         fields = "__all__"
+
+        widgets = {
+            'name':forms.TextInput(attrs={'class':'form-cibtrik'})
+        }
